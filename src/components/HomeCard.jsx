@@ -86,20 +86,6 @@ const HomeCard = () => {
             <h1 style={{ color: "red" }}>Populer Movie</h1>
           </div>
         </Col>
-
-        <Col
-          className="d-flex align-content-center justify-content-end px-3"
-          xs={6}
-          md={4}
-        >
-          <button
-            type="button"
-            onClick={loadMoreMovies}
-            style={{ border: "none", background: "black", color: "red" }}
-          >
-            Load More <AiOutlineArrowRight />
-          </button>
-
         <Col className="d-flex justify-content-end px-3" xs={6} md={4}>
           <div className="d-flex align-items-center ">
             <button
@@ -110,7 +96,6 @@ const HomeCard = () => {
               Load More <AiOutlineArrowRight />
             </button>
           </div>
-
         </Col>
       </Row>
 
