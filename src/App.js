@@ -1,13 +1,20 @@
 import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
-import Navbar from "./components/Navbar";
+import HomeCard from "./components/HomeCard";
+
+import "bootstrap/dist/css/bootstrap.min.css";
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 function App() {
   return (
     <BrowserRouter>
+
+      <HomeCard />
+
       <Navbar />
+
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>
