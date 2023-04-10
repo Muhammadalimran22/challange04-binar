@@ -1,6 +1,6 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-
+import HomeCard from "../components/HomeCard";
+import HeaderMovie from "../components/HeaderMovie";
 function Home() {
   return;
 import Navbar from "../components/Navbar";
@@ -11,6 +11,11 @@ function Home() {
     <Container>
       <Navbar />
     </Container>
+  return (
+    <>
+      <HeaderMovie />
+      <HomeCard />
+    </>
   );
 }
 
