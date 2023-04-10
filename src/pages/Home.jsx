@@ -1,8 +1,13 @@
 import React from "react";
-import { Container } from "react-bootstrap";
-
+import HomeCard from "../components/HomeCard";
+import HeaderMovie from "../components/HeaderMovie";
 function Home() {
-  return <div></div>;
+  return (
+    <>
+      <HeaderMovie />
+      <HomeCard />
+    </>
+  );
 }
 
 export default Home;
