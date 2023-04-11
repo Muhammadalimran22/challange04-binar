@@ -1,6 +1,6 @@
 import React from "react";
 import { Container, Form, Button, Navbar } from "react-bootstrap";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../style/Navbar.css";
 
 function NavbarComponent() {
@@ -15,7 +15,7 @@ function NavbarComponent() {
     <Navbar bg="transparant navbar-expand-lg fixed-top p-2">
       <Container fluid>
         <div>
-          <Navbar.Brand className="text-danger fs-2 Navbar-logo" href="/">
+          <Navbar.Brand className="text-danger fs-2 Navbar-logo" as={Link} to={"/"}>
             Movielist
           </Navbar.Brand>
         </div>
