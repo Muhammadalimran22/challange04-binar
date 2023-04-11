@@ -3,6 +3,7 @@ import { Container, Card, Row, Col } from "react-bootstrap";
 import axios from "axios";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import { Link } from "react-router-dom";
+import "../style/Homecard.css";
 
 const apiKey = process.env.REACT_APP_APIKEY;
 const baseUrl = process.env.REACT_APP_BASEURL;
@@ -29,6 +30,8 @@ const HomeCard = () => {
   const PopularMovieCard = ({ title, poster, to }) => (
     <Card
       variant="outline-danger"
+      as={Link}
+      to={to}
       style={{
         width: "18rem",
         margin: "10px",
@@ -37,10 +40,11 @@ const HomeCard = () => {
         outlineStyle: "outset",
         outlineWidth: "thin",
       }}
+      className="Card-component"
     >
       <Card.Img variant="top" src={`https://image.tmdb.org/t/p/original${poster}`} />
       <Card.Body style={{ color: "black" }}>
-        <Card.Title style={{ color: "white" }} as={Link} to={to}>
+        <Card.Title style={{ color: "white" }}>
           <h4 className="text-center">{title}</h4>
         </Card.Title>
       </Card.Body>
