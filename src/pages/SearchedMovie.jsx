@@ -4,6 +4,7 @@ import axios from "axios";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 import HeaderMovie from "../components/HeaderMovie";
+import "../style/Homecard.css";
 
 const baseUrl = process.env.REACT_APP_BASEURL;
 const apiKey = process.env.REACT_APP_APIKEY;
@@ -29,6 +30,9 @@ function SearchedMovie() {
 
   const PopularMovieCard = ({ title, poster, to }) => (
     <Card
+      as={Link}
+      to={to}
+      className="Card-component"
       variant="outline-danger"
       style={{
         width: "18rem",
@@ -41,7 +45,7 @@ function SearchedMovie() {
     >
       <Card.Img variant="top" src={`https://image.tmdb.org/t/p/original${poster}`} />
       <Card.Body style={{ color: "black" }}>
-        <Card.Title style={{ color: "white" }} as={Link} to={to}>
+        <Card.Title style={{ color: "white" }}>
           <h4 className="text-center">{title}</h4>
         </Card.Title>
       </Card.Body>
