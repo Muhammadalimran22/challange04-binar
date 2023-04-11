@@ -17,7 +17,6 @@ function DetailMovie() {
       try {
         const response = await axios.get(`${baseUrl}/movie/${params.id}?api_key=${apiKey}&language=en-US`);
         setDetailMovie(response.data);
-        console.log(response.data);
       } catch (error) {
         alert(error);
       }

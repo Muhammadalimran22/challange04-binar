@@ -2,15 +2,6 @@ import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Home from "./pages/Home";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "bootstrap/dist/css/bootstrap.min.css";
-function App() {
-  return (
-    <BrowserRouter>
-
-      <HomeCard />
-
-      <Navbar />
-
 import SearchedMovie from "./pages/SearchedMovie";
 import DetailMovie from "./pages/DetailMovie";
 function App() {
