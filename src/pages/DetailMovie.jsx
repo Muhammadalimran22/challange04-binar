@@ -19,7 +19,6 @@ function DetailMovie() {
       try {
         const response = await axios.get(`${baseUrl}/movie/${params.id}?api_key=${apiKey}&language=en-US`);
         setDetailMovie(response.data);
-        console.log(response.data);
       } catch (error) {
         alert(error);
       }
@@ -31,7 +30,7 @@ function DetailMovie() {
   return (
     <>
       <NavbarComponent />
-      <Carousel>
+      <Carousel controls={false}>
         <Carousel.Item>
           <img className="Carousel-img d-block w-100" src={`https://image.tmdb.org/t/p/original${detailMovie?.backdrop_path}`} alt="First slide" />
           <Carousel.Caption className="Movie-caption">
