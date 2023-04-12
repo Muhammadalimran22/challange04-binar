@@ -31,7 +31,7 @@ function DetailMovie() {
   return (
     <>
       <NavbarComponent />
-      <Carousel>
+      <Carousel controls={false}>
         <Carousel.Item>
           <img className="Carousel-img d-block w-100" src={`https://image.tmdb.org/t/p/original${detailMovie?.backdrop_path}`} alt="First slide" />
           <Carousel.Caption className="Movie-caption">
